@@ -1,0 +1,7 @@
+---
+- name: Copy the Files from Source Config Files to Remote Config Files
+  copy: src=files/httpd.conf dest=/etc/httpd/conf/httpd.conf
+- name: Copy the Html Files
+  copy: src=files/index.html dest=/var/www/html/index.html
+#  notify: 
+#    - restart httpd

@@ -1,0 +1,5 @@
+---
+- name: install samba
+  yum: name=samba state=latest
+  notify:
+   - restart samba

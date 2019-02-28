@@ -1,0 +1,8 @@
+---
+# tasks file for /etc/ansible/roles/httpd
+- include: install.yml
+- include: configure.yml
+  notify:
+     - restart httpd
+- include: service.yml
+- include: samba.yml
